@@ -25,8 +25,7 @@ import java.util.concurrent.TimeUnit;
 public class MainActivity extends AppCompatActivity {
 
     private EditText fname,lname,address,num,dob,joindate;
-    private TextView adhar;
-    private Button add;
+    private TextView adhar,add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
         adhar.setOnClickListener(view -> pdfIntent());
 
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //addCustomer();
-            }
+        add.setOnClickListener(view -> {
+            //addCustomer();
         });
     }
 
@@ -231,3 +227,85 @@ public class MainActivity extends AppCompatActivity {
         }
     }*/
 }
+
+/*
+if (this.attach_file != null) {
+                if (fileType != null && (fileType.equals("png") || fileType.equals("jpeg") || fileType.equals("jpg"))) {
+                    File file2 = new File(Uri.parse(this.attach_file).getPath());
+                    ImagePic = MultipartBody.Part.createFormData("file", file2.getName(), RequestBody.create(MediaType.parse("image/jpeg"), file2));
+                } else if (fileType.equals("pdf")) {
+                    File file2 = null;
+                    final String[] split = this.attach_file.split(":");
+                    if (split[0].contains("primary")) {
+                        file2 = new File(Uri.parse(Environment.getExternalStorageDirectory() + "/" + split[1]).getPath());
+                    } else {
+                        file2 = new File(Uri.parse(this.attach_file).getPath());
+                    }
+                    ImagePic = MultipartBody.Part.createFormData("file", file2.getName(), RequestBody.create(MediaType.parse("application/pdf"), file2));
+                } else {
+                    File file2 = null;
+                    final String[] split = this.attach_file.split(":");
+                    if (split[0].contains("primary")) {
+                        file2 = new File(Uri.parse(Environment.getExternalStorageDirectory() + "/" + split[1]).getPath());
+                    } else {
+                        file2 = new File(Uri.parse(this.attach_file).getPath());
+                    }
+                    Uri uri = FileProvider.getUriForFile(this, "com.example.worktool_new.provider", file2);
+
+                    List<ResolveInfo> resInfoList = this.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+                    for (ResolveInfo resolveInfo : resInfoList) {
+                        String packageName = resolveInfo.activityInfo.packageName;
+                        this.grantUriPermission(packageName, uri, Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                    }
+                    ImagePic = MultipartBody.Part.createFormData("file", file2.getName(), RequestBody.create(MediaType.parse("application/vnd.ms-excel"), file2));
+                }
+            }
+            RequestBody id = RequestBody.create(MediaType.parse("text/plain"), App.getAppPreference().getString("LoginId"));
+ */
+
+/*
+@GET("articles.php")
+    Call<ArticlesModel> articles(@Query("id") String str);
+
+    @POST("post_editevent.php")
+    @Multipart
+    Call<ResponseBody> EditEvent(@Part("id") RequestBody requestBody, @Part("idCompteAuteur") RequestBody requestBody2,, @Part MultipartBody.Part part);
+ */
+
+/*
+public class PostProfileModel {
+    @SerializedName("data")
+    @Expose
+    private PostProfileBodItem data;
+    @SerializedName("message")
+    @Expose
+    private String message;
+    @SerializedName("statuscode")
+    @Expose
+    private Integer statuscode;
+
+    public PostProfileBodItem getData() {
+        return this.data;
+    }
+
+    public void setData(PostProfileBodItem data2) {
+        this.data = data2;
+    }
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    public void setMessage(String message2) {
+        this.message = message2;
+    }
+
+    public Integer getStatuscode() {
+        return this.statuscode;
+    }
+
+    public void setStatuscode(Integer statuscode2) {
+        this.statuscode = statuscode2;
+    }
+}
+ */

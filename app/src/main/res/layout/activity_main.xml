@@ -1,72 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:layout_margin="10dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <EditText
-        android:id="@+id/inputNum"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Number"
-        android:textSize="25sp"/>
 
     <EditText
         android:id="@+id/inputFName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:hint="First Name"
-        android:textSize="25sp"/>
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/inputLName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
         android:hint="Last Name"
-        android:textSize="25sp"/>
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/inputNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/inputDOB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
         android:hint="date of birth"
-        android:textSize="25sp"/>
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/inputJoinDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
         android:hint="Joining Date"
-        android:textSize="25sp"/>
+        android:textSize="25sp" />
 
     <EditText
         android:id="@+id/inputAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
         android:hint="Address"
-        android:textSize="25sp"/>
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/inputAdhar"
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:background="#A1B1C3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#A1B1C3"
+        android:gravity="center"
+        android:padding="5dp"
         android:text="Select Aadhar card"
-        android:textSize="25sp"/>
+        android:textSize="25sp" />
 
-    <Button
+    <TextView
         android:id="@+id/addCustomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Customer"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
-        />
+        android:layout_marginTop="20dp"
+        android:text="Add Customer"
+        android:textAllCaps="false"
+        android:textSize="30sp" />
 
 </LinearLayout>
